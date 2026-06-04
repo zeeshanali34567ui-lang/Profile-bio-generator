@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="ulGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="bottomBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- White top 60% -->
+  <rect width="1080" height="1152" fill="#FFFFFF"/>
+  <!-- Light blue gradient bottom 40% -->
+  <rect y="1152" width="1080" height="768" fill="url(#bottomBg)"/>
+
+  <!-- ===== Logo (top-center, padded) ===== -->
+  <g transform="translate(400, 80)">
+    <!-- Icon Mark -->
+    <rect x="0" y="0" width="60" height="60" rx="13" ry="13" fill="url(#grad)"/>
+    <polygon points="21,12 28,34 21,48 14,34" fill="#FFFFFF"/>
+    <circle cx="21" cy="46" r="2.2" fill="#FFFFFF"/>
+    <line x1="33" y1="17" x2="49" y2="17" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="33" y1="24" x2="47" y2="24" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="33" y1="31" x2="45" y2="31" stroke="#FFFFFF" stroke-opacity="0.50" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="33" y1="38" x2="43" y2="38" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Wordmark -->
+    <text x="76" y="28" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" fill="#0F172A" letter-spacing="0.3">Profile Bio</text>
+    <text x="76" y="50" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="16" fill="#64748B" letter-spacing="0.2">Generator</text>
+    <rect x="76" y="55" width="46" height="2" rx="1" fill="url(#ulGrad)"/>
+  </g>
+
+  <!-- Ultra-bold headline -->
+  <text x="540" y="310" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="900" font-size="72" fill="#0F172A" text-anchor="middle">Your Bio</text>
+  <text x="540" y="400" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="900" font-size="72" fill="#0F172A" text-anchor="middle">is Boring?</text>
+
+  <!-- Second line in blue -->
+  <text x="540" y="520" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="52" fill="#2563EB" text-anchor="middle">Fix it FREE</text>
+  <text x="540" y="585" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="52" fill="#2563EB" text-anchor="middle">in 10 seconds</text>
+
+  <!-- ===== Phone Mockup (center) ===== -->
+  <g transform="translate(240, 680)">
+    <!-- Phone body -->
+    <rect x="0" y="0" width="600" height="740" rx="40" ry="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+    <!-- Status bar -->
+    <rect x="0" y="0" width="600" height="48" rx="40" ry="40" fill="#F8FAFC"/>
+    <rect x="0" y="30" width="600" height="18" fill="#F8FAFC"/>
+    <!-- Notch -->
+    <rect x="220" y="8" width="160" height="24" rx="12" ry="12" fill="#0F172A"/>
+
+    <!-- Screen content area -->
+    <rect x="24" y="60" width="552" height="660" rx="4" ry="4" fill="url(#screenGrad)"/>
+
+    <!-- App header in screen -->
+    <text x="300" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="20" fill="#0F172A" text-anchor="middle">Bio Generator</text>
+
+    <!-- Platform selector -->
+    <rect x="48" y="130" width="504" height="44" rx="10" ry="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="76" y="158" font-family="'Inter', sans-serif" font-size="16" fill="#0F172A">Instagram</text>
+    <!-- Dropdown arrow -->
+    <polygon points="520,148 530,148 525,158" fill="#64748B"/>
+
+    <!-- Generating animation - bio lines appearing -->
+    <rect x="48" y="200" width="504" height="180" rx="10" ry="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+
+    <!-- Generated bio text lines with gradient feel -->
+    <rect x="68" y="224" width="380" height="10" rx="5" fill="url(#grad)" opacity="0.9"/>
+    <rect x="68" y="248" width="340" height="10" rx="5" fill="url(#grad)" opacity="0.7"/>
+    <rect x="68" y="272" width="300" height="10" rx="5" fill="url(#grad)" opacity="0.5"/>
+    <rect x="68" y="296" width="260" height="10" rx="5" fill="url(#grad)" opacity="0.35"/>
+    <rect x="68" y="320" width="200" height="10" rx="5" fill="url(#grad)" opacity="0.2"/>
+    <!-- Cursor blink -->
+    <rect x="272" y="318" width="2" height="16" fill="#2563EB"/>
+
+    <!-- Copy button -->
+    <rect x="48" y="410" width="240" height="50" rx="12" ry="12" fill="url(#grad)"/>
+    <text x="168" y="442" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" text-anchor="middle">Copy Bio</text>
+
+    <!-- Regenerate button -->
+    <rect x="312" y="410" width="240" height="50" rx="12" ry="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="432" y="442" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="18" fill="#0F172A" text-anchor="middle">Regenerate</text>
+
+    <!-- Platform pills at bottom of screen -->
+    <g transform="translate(48, 500)">
+      <rect x="0" y="0" width="100" height="32" rx="999" ry="999" fill="#F1F5F9"/>
+      <text x="50" y="21" font-family="'Inter', sans-serif" font-size="12" fill="#64748B" text-anchor="middle">TikTok</text>
+      <rect x="112" y="0" width="110" height="32" rx="999" ry="999" fill="#F1F5F9"/>
+      <text x="167" y="21" font-family="'Inter', sans-serif" font-size="12" fill="#64748B" text-anchor="middle">LinkedIn</text>
+      <rect x="234" y="0" width="110" height="32" rx="999" ry="999" fill="#F1F5F9"/>
+      <text x="289" y="21" font-family="'Inter', sans-serif" font-size="12" fill="#64748B" text-anchor="middle">YouTube</text>
+      <rect x="356" y="0" width="110" height="32" rx="999" ry="999" fill="#F1F5F9"/>
+      <text x="411" y="21" font-family="'Inter', sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Pinterest</text>
+    </g>
+  </g>
+
+  <!-- URL on light blue background -->
+  <text x="540" y="1720" font-family="'Fira Code', 'Courier New', monospace" font-weight="500" font-size="24" fill="#0F172A" text-anchor="middle">profilebiogenerator.site</text>
+
+  <!-- Subtle bottom tagline -->
+  <text x="540" y="1780" font-family="'Inter', sans-serif" font-weight="400" font-size="18" fill="#64748B" text-anchor="middle">100% Free · No Signup Required</text>
+</svg>

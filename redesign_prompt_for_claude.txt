@@ -1,0 +1,92 @@
+================================================================================
+INSTABIOGEN — REDESIGN SPECIFICATION & CLAUDE PROMPT
+================================================================================
+
+This document contains the complete feature flow, CSS specifications, and a ready-to-use prompt for Claude to generate a new "tool-first" redesign for the InstaBioGen website.
+
+--------------------------------------------------------------------------------
+PART 1: CLAUDE REDESIGN PROMPT
+--------------------------------------------------------------------------------
+Copy and paste the following prompt into Claude to initiate the redesign:
+
+"""
+You are an expert UI/UX designer and frontend developer specializing in modern, high-converting React/Next.js web applications. I need you to redesign the landing page for my tool, "Profile Bio Generator" (InstaBioGen).
+
+CRITICAL REQUIREMENT - "TOOL-FIRST" DESIGN:
+Do NOT create a generic SaaS landing page. The design MUST be strictly "tool-first". The structural hierarchy for the top of the page must be:
+1. Main Headline (H1)
+2. Short, punchy introduction text
+3. THE BIO GENERATOR TOOL ITSELF (immediately visible without scrolling)
+The user should be able to interact with the tool right away. Move any secondary elements (like the live preview mockup, "How it works", etc.) BELOW the tool.
+
+Use the following provided feature flow, CSS styling details, and component data to build a cohesive, modern, and premium single-page redesign using React, Tailwind CSS, and Framer Motion. 
+
+Make sure the aesthetic is incredibly polished, using glassmorphism, subtle glowing gradients, and smooth micro-interactions.
+
+Here is the data for the site:
+[See PART 2 and PART 3 below for the site data]
+"""
+
+--------------------------------------------------------------------------------
+PART 2: FEATURE FLOW & SECTIONS (Current Site Structure)
+--------------------------------------------------------------------------------
+The current site contains the following sections/components. In your redesign, reorder them to prioritize the "Tool-First" approach (H1 -> Intro -> Tool).
+
+1. Navigation (Header):
+   - Logo (Brand icon + Georgia serif text "Profile Bio Generator").
+   - Links: Home, About, Blog, Contact.
+   - CTA: "Generate Bio".
+
+2. Hero Area (To be merged with the Tool):
+   - Badge: "InstaBioGen 2.0 • AI Powered".
+   - H1: "Instagram Bio Generator".
+   - Intro: "Looking for the perfect Instagram bio? Our ig bio generator crafts unique, aesthetic, and highly converting profile descriptions in seconds..."
+   - Social Proof: Avatar stack with "100,000+ bios generated".
+
+3. Live Bio Preview:
+   - A dynamic, animated mockup of an Instagram profile interface showing generated bios rotating automatically.
+
+4. Bio Generator Tool (The Core Component):
+   - Inputs: Name (optional), Category (dropdown), Tone/Style (dropdown), Number of Bios (1-5).
+   - Toggles: Include Emojis, Include Hashtags.
+   - Action: "Generate X Bios" Button with loading state.
+   - Output: Results list with Copy, Regenerate, and character count warnings. Features "Copy All" and "Download .txt" utilities.
+
+5. How to Use:
+   - 3-step process: Select Category, Pick Your Tone, Generate & Copy.
+
+6. Explore Bio Styles (Bento Grid):
+   - Categories linked to blog posts: Aesthetic, Girls & Boys, Business & Brand Bios.
+
+7. Why Choose Us:
+   - Features: Lightning-Fast Results, 100% Unique Outputs, Conversion-Optimized, Free Forever.
+
+8. SEO Content Articles:
+   - Sections: Instagram Bio Ideas, What is Instagram Bio Generator?, Instagram Bio Maker, Tips to Write Better Bios.
+
+9. FAQ Section:
+   - Interactive accordion with 4 common questions about the tool, pricing, cross-platform usage, and update frequency.
+
+10. Footer:
+    - Logo, description, and categorized links (Tools, Company, Legal).
+
+--------------------------------------------------------------------------------
+PART 3: CSS & STYLING SPECIFICATIONS
+--------------------------------------------------------------------------------
+* Framework: Tailwind CSS v4.
+* Colors (Defined in OKLCH for dynamic theming):
+  - Primary Theme: Blue-to-Cyan gradient (135deg, #2563EB to #06B6D4).
+  - Backgrounds: Light mode uses near-white `oklch(0.98 0.002 240)`, dark mode uses deep navy/black `oklch(0.12 0.02 260)`.
+* Typography:
+  - Heading Font: Space Grotesk (`var(--font-space-grotesk)`).
+  - Body Font: Inter (`var(--font-inter)`).
+  - Logo Font: Georgia (Serif).
+* UI Patterns:
+  - Generous border radii: `rounded-2xl`, `rounded-3xl`, and `rounded-full`.
+  - Glassmorphism: Heavy use of `backdrop-blur-md`, `bg-background/50`.
+  - Borders: Thin `border border-border/50` for structure.
+  - Glow Effects: Large radial gradients behind elements to create ambient lighting (`blur-[120px]`).
+  - Shadows: Soft, colored drop shadows on interactive elements (e.g., `shadow-primary/20`).
+* Animation Framework: Framer Motion.
+  - Page elements use staggered fade-ins and upward y-axis translations on scroll.
+  - Buttons have scale effects on hover/active (`hover:scale-105 active:scale-95`).

@@ -1,0 +1,126 @@
+================================================================================
+           PROFILE BIO GENERATOR — COMPLETE PROJECT SPECIFICATION & ARCHITECTURE
+================================================================================
+
+1. PROJECT OVERVIEW & ARCHITECTURE
+--------------------------------------------------------------------------------
+* Project Name: Profile Bio Generator
+* Framework: Next.js 15 (App Router), React 19
+* Styling: Tailwind CSS v4, Custom CSS variables
+* Components: shadcn/ui (Radix Primitives)
+* Deployment: Vercel (Optimized for Edge)
+* Core Purpose: A completely free, AI-powered (client-side) bio generator for 
+  Instagram, TikTok, YouTube, and other social media platforms.
+
+2. CORE FEATURE FLOW & LOGIC (BIO GENERATOR TOOL)
+--------------------------------------------------------------------------------
+Component: components/bio-generator-tool.tsx
+Type: Client Component ("use client")
+
+A. Input Controls Flow
+   1. Platform Selection (Optional/Dynamic based on route)
+      - Instagram, TikTok, Twitter/X, LinkedIn, YouTube, Pinterest, Threads.
+   2. Name Input (Max 30 chars, Optional)
+   3. Category Selection (General, Gaming, Fitness, Music, Travel, etc.)
+   4. Tone/Style Selection (Attitude, Cool, Stylish, VIP, Swag, Professional, etc.)
+   5. Number of Bios (1 to 5)
+   6. Toggle: Include Emojis
+   7. Toggle: Include Hashtags
+
+B. Generation Algorithm Flow
+   [ User clicks Generate ] ➔ [ Set isGenerating = true (Simulates 600ms AI load) ]
+   ➔ Fetch templates, emojis, hashtags based on selected Tone
+   ➔ Shuffle templates (Fisher-Yates) and slice requested Number of Bios
+   ➔ Iterate over selected templates:
+      - Emojis: If true, inject 2 random tone-matching emojis. If false, strip {emoji} tags.
+      - Name: If provided, prepend or append name variations (50% random chance).
+      - Category: If not General, prepend specific role tag (e.g., "Fitness Enthusiast |").
+      - Hashtags: If true, append 2 random tone-matching hashtags to a new line.
+   ➔ Render Output Cards ➔ Check Character Limits based on Platform ➔ Set isGenerating = false
+
+C. Output & Utility Flow
+   - Individual Bio Copy: Copies single bio to clipboard using Navigator API (with textarea fallback). Displays success checkmark for 2s.
+   - Regenerate Single Bio: Shuffles and generates a single new bio replacing only the target card.
+   - Copy All: Copies all generated bios joined by double newlines.
+   - Download .txt: Generates a downloadable text file formatted with all bios.
+   - Limit Validation: Dynamically checks bio length against platform limits (e.g., TikTok 80, Instagram 150) and displays a warning alert if exceeded.
+   - Presets: Quick start buttons for "Fitness Influencer", "Tech Entrepreneur", "Travel Blogger".
+
+3. SEO IMPLEMENTATION, METADATA & SCHEMA TAGS
+--------------------------------------------------------------------------------
+The project heavily implements modern Next.js SEO best practices across all pages.
+
+A. Global Layout Metadata (app/layout.tsx)
+   - Title Template: "%s | Profile Bio Generator"
+   - Default Description: "Discover the best instagram bio ideas and generate stunning, high-converting bios in seconds..."
+   - Keywords: "instagram bio ideas for boys", "tiktok bio generator", "aesthetic instagram bio", etc.
+   - OpenGraph: type "website", locale "en_IN", generic title/desc.
+   - Twitter Card: "summary_large_image", creator "@profilebiogen"
+   - Google Verification: "g4UN8qZBakpycCcAlG-QrqwigzDDGs3HvJZB3Su1iLA"
+   - Robots: index, follow, max-image-preview: large
+
+B. Page-Specific Canonical Links
+   - Home: "/"
+   - Instagram Generator: "/instagram-bio-generator"
+   - TikTok Generator: "/tiktok-bio-generator"
+   - YouTube Generator: "/youtube-bio-generator"
+   - Legal/About: "/about", "/privacy-policy", "/terms-and-conditions", "/disclaimer", "/contact"
+
+C. Structured Data (JSON-LD) Injections
+   - WebSite/SearchAction Schema: On Home Page for potential search actions.
+   - FAQPage Schema: Implemented on Home Page wrapping the core FAQ accordion questions.
+   - WebPage Schema: On specific tool pages (Instagram, TikTok, YouTube).
+   - AboutPage Schema: On /about.
+   - ContactPage Schema: On /contact.
+
+D. Content SEO (components/seo-content.tsx)
+   - Uses semantic HTML (`<article>`, `<h2>`, `<h3>`, `<ul>`, `<li>`).
+   - Keyword rich headings: "Instagram Bio Ideas", "What is Instagram Bio Generator?", "Instagram Bio Maker", "Tips to Write Better Bios".
+   - Internal linking architecture using Next.js `<Link>` to connect specific generator pages (TikTok, YouTube, Instagram).
+
+4. UI COMPONENTS & ANIMATION ARCHITECTURE
+--------------------------------------------------------------------------------
+A. Animated UI (framer-motion)
+   - `FadeIn`: Standard scroll-triggered fade up animation.
+   - `FadeInStagger` & `FadeInStaggerItem`: For grid items (used in WhyChooseUs, ExploreBioStyles).
+   - Custom SVG Gradients on Header/Footer logos.
+   - Micro-animations: Hover scales, active state spring animations in the Navbar.
+
+B. Key UI Modules
+   - Header: Glassmorphism sticky nav, mobile responsive drawer with Framer Motion layout animations.
+   - WhyChooseUs: Bento-grid style feature cards with subtle gradient hover effects.
+   - ExploreBioStyles: Cross-linking bento grid pointing to specific platform generators.
+   - FaqAccordion: Radix UI backed collapsible FAQ section.
+   - Footer: Complex multi-column layout with social/legal links and SVG branding.
+
+C. Theming & Styling (globals.css)
+   - Fully CSS Variable driven (oklch color space) for Light/Dark mode via `next-themes`.
+   - Fonts: DM Sans (Sans) and Playfair Display (Serif/Heading) loaded via next/font/google.
+   - Utility class `.section__h2` for standardized responsive heading typography.
+
+5. DIRECTORY & ROUTING STRUCTURE
+--------------------------------------------------------------------------------
+/app
+  ├── (Home) page.tsx, layout.tsx, globals.css
+  ├── /instagram-bio-generator (Dedicated IG page)
+  ├── /tiktok-bio-generator (Dedicated TikTok page)
+  ├── /youtube-bio-generator (Dedicated YT page)
+  ├── /about (Story, Milestones, Values)
+  ├── /contact (Feedback/Support Form)
+  ├── /privacy-policy (Legal)
+  ├── /terms-and-conditions (Legal)
+  ├── /disclaimer (Legal)
+  ├── sitemap.ts (Dynamic XML generation)
+  └── robots.ts (Robots rules config)
+
+/components
+  ├── bio-generator-tool.tsx (The core engine)
+  ├── animated-ui.tsx (Framer motion wrappers)
+  ├── header.tsx / footer.tsx
+  ├── seo-content.tsx (Text blocks for rankings)
+  ├── explore-bio-styles.tsx, why-choose-us.tsx, faq-accordion.tsx
+  └── /ui (Radix + Tailwind base components: Button, Input, Select, Switch, etc.)
+
+================================================================================
+                   InstaBioGen Architecture Data © 2026
+================================================================================

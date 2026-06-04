@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="ulGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- White Background -->
+  <rect width="1584" height="396" fill="#FFFFFF"/>
+
+  <!-- Top edge: full-width gradient bar -->
+  <rect x="0" y="0" width="1584" height="4" fill="url(#barGrad)"/>
+
+  <!-- ===== LEFT 60%: Logo + Headline + Sub-text ===== -->
+
+  <!-- Icon Mark (56×56, slightly smaller for this format) -->
+  <g transform="translate(80, 60)">
+    <rect x="0" y="0" width="56" height="56" rx="12" ry="12" fill="url(#grad)"/>
+    <polygon points="20,12 26,32 20,46 14,32" fill="#FFFFFF"/>
+    <circle cx="20" cy="44" r="2" fill="#FFFFFF"/>
+    <line x1="31" y1="17" x2="46" y2="17" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="2" stroke-linecap="round"/>
+    <line x1="31" y1="23" x2="44" y2="23" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/>
+    <line x1="31" y1="29" x2="42" y2="29" stroke="#FFFFFF" stroke-opacity="0.50" stroke-width="2" stroke-linecap="round"/>
+    <line x1="31" y1="35" x2="40" y2="35" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Wordmark next to icon -->
+  <text x="150" y="88" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" fill="#0F172A" letter-spacing="0.3">Profile Bio</text>
+  <text x="150" y="110" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="16" fill="#64748B" letter-spacing="0.2">Generator</text>
+  <rect x="150" y="115" width="44" height="2" rx="1" fill="url(#ulGrad)"/>
+
+  <!-- Bold headline -->
+  <text x="80" y="185" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="34" fill="#0F172A">Free Bio Generator for</text>
+  <text x="80" y="228" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="34" fill="#0F172A">Every Social Platform</text>
+
+  <!-- Sub-text: platform list -->
+  <text x="80" y="272" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="400" font-size="16" fill="#64748B">Instagram · TikTok · LinkedIn · Twitter · YouTube · Pinterest · Threads</text>
+
+  <!-- ===== RIGHT 40%: Browser Window Illustration ===== -->
+  <g transform="translate(980, 50)">
+    <!-- Browser chrome -->
+    <rect x="0" y="0" width="520" height="300" rx="10" ry="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <!-- Title bar -->
+    <rect x="0" y="0" width="520" height="32" rx="10" ry="10" fill="#F1F5F9"/>
+    <rect x="0" y="20" width="520" height="12" fill="#F1F5F9"/>
+    <!-- Window dots -->
+    <circle cx="18" cy="16" r="5" fill="#FCA5A5"/>
+    <circle cx="36" cy="16" r="5" fill="#FCD34D"/>
+    <circle cx="54" cy="16" r="5" fill="#86EFAC"/>
+    <!-- URL bar -->
+    <rect x="80" y="8" width="360" height="16" rx="4" ry="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.5"/>
+    <text x="100" y="20" font-family="'Fira Code', monospace" font-size="8" fill="#94A3B8">profilebiogenerator.site</text>
+
+    <!-- Content area: bio form UI -->
+    <!-- Label -->
+    <text x="30" y="62" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#0F172A">Platform</text>
+    <!-- Platform selector -->
+    <rect x="30" y="68" width="200" height="24" rx="6" ry="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="42" y="84" font-family="'Inter', sans-serif" font-size="10" fill="#64748B">Instagram</text>
+
+    <!-- Bio input label -->
+    <text x="30" y="114" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#0F172A">Your Bio</text>
+    <!-- Active input field with blue accent -->
+    <rect x="30" y="120" width="460" height="60" rx="6" ry="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <!-- Typed text lines -->
+    <text x="42" y="140" font-family="'Inter', sans-serif" font-size="10" fill="#0F172A">Digital creator | Photography enthusiast</text>
+    <text x="42" y="155" font-family="'Inter', sans-serif" font-size="10" fill="#0F172A">Sharing tips &amp; inspiration daily ✨</text>
+    <text x="42" y="170" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">|</text>
+
+    <!-- Generate button -->
+    <rect x="30" y="196" width="140" height="32" rx="8" ry="8" fill="url(#grad)"/>
+    <text x="100" y="216" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12" fill="#FFFFFF" text-anchor="middle">Generate Bio</text>
+
+    <!-- Output preview area -->
+    <rect x="30" y="244" width="460" height="40" rx="6" ry="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="38" y="254" width="180" height="6" rx="3" fill="#E2E8F0"/>
+    <rect x="38" y="266" width="140" height="6" rx="3" fill="#E2E8F0"/>
+  </g>
+</svg>

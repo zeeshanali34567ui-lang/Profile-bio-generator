@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="stripGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="ulGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="topWash" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background with subtle light blue wash at top -->
+  <rect width="1080" height="1080" fill="#FFFFFF"/>
+  <rect width="1080" height="400" fill="url(#topWash)"/>
+
+  <!-- ===== Logo (centered at top) ===== -->
+  <g transform="translate(432, 70)">
+    <!-- Icon Mark -->
+    <rect x="0" y="0" width="60" height="60" rx="13" ry="13" fill="url(#grad)"/>
+    <polygon points="21,12 28,34 21,48 14,34" fill="#FFFFFF"/>
+    <circle cx="21" cy="46" r="2.2" fill="#FFFFFF"/>
+    <line x1="33" y1="17" x2="49" y2="17" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="33" y1="24" x2="47" y2="24" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="33" y1="31" x2="45" y2="31" stroke="#FFFFFF" stroke-opacity="0.50" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="33" y1="38" x2="43" y2="38" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Wordmark -->
+    <text x="76" y="28" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" fill="#0F172A" letter-spacing="0.3">Profile Bio</text>
+    <text x="76" y="50" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="16" fill="#64748B" letter-spacing="0.2">Generator</text>
+    <rect x="76" y="55" width="46" height="2" rx="1" fill="url(#ulGrad)"/>
+  </g>
+
+  <!-- Large Headline (centered) -->
+  <text x="540" y="220" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="42" fill="#0F172A" text-anchor="middle">Generate Your Perfect</text>
+  <text x="540" y="275" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="42" fill="#0F172A" text-anchor="middle">Social Media Bio</text>
+
+  <!-- Sub-text -->
+  <text x="540" y="330" font-family="'Inter', sans-serif" font-weight="400" font-size="20" fill="#64748B" text-anchor="middle">Free tool · No signup · Instant results</text>
+
+  <!-- ===== 3×2 Grid of Platform Cards ===== -->
+  <g transform="translate(100, 390)">
+    <!-- Row 1 -->
+    <!-- Instagram -->
+    <g>
+      <rect x="0" y="0" width="270" height="80" rx="16" ry="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="0" y="0" width="5" height="80" rx="3" ry="0" fill="#E4405F"/>
+      <text x="40" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="20" fill="#0F172A">Instagram</text>
+    </g>
+
+    <!-- TikTok -->
+    <g transform="translate(295, 0)">
+      <rect x="0" y="0" width="270" height="80" rx="16" ry="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="0" y="0" width="5" height="80" rx="3" ry="0" fill="#000000"/>
+      <text x="40" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="20" fill="#0F172A">TikTok</text>
+    </g>
+
+    <!-- Twitter/X -->
+    <g transform="translate(590, 0)">
+      <rect x="0" y="0" width="270" height="80" rx="16" ry="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="0" y="0" width="5" height="80" rx="3" ry="0" fill="#1DA1F2"/>
+      <text x="40" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="20" fill="#0F172A">Twitter / X</text>
+    </g>
+
+    <!-- Row 2 -->
+    <!-- LinkedIn -->
+    <g transform="translate(0, 105)">
+      <rect x="0" y="0" width="270" height="80" rx="16" ry="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="0" y="0" width="5" height="80" rx="3" ry="0" fill="#0A66C2"/>
+      <text x="40" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="20" fill="#0F172A">LinkedIn</text>
+    </g>
+
+    <!-- YouTube -->
+    <g transform="translate(295, 105)">
+      <rect x="0" y="0" width="270" height="80" rx="16" ry="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="0" y="0" width="5" height="80" rx="3" ry="0" fill="#FF0000"/>
+      <text x="40" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="20" fill="#0F172A">YouTube</text>
+    </g>
+
+    <!-- Pinterest -->
+    <g transform="translate(590, 105)">
+      <rect x="0" y="0" width="270" height="80" rx="16" ry="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="0" y="0" width="5" height="80" rx="3" ry="0" fill="#E60023"/>
+      <text x="40" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="20" fill="#0F172A">Pinterest</text>
+    </g>
+  </g>
+
+  <!-- URL at bottom -->
+  <text x="540" y="960" font-family="'Fira Code', 'Courier New', monospace" font-weight="500" font-size="18" fill="#2563EB" text-anchor="middle">profilebiogenerator.site</text>
+
+  <!-- Bottom gradient strip -->
+  <rect x="0" y="1074" width="1080" height="6" fill="url(#stripGrad)"/>
+</svg>
