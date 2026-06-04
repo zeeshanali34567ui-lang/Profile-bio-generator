@@ -9,9 +9,9 @@ import { SeoContent } from "@/components/seo-content"
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/components/animated-ui"
 
 export const metadata: Metadata = {
-  title: "Instagram Bio Generator – Create Unique Bios Instantly",
+  title: "Free Profile Bio Generator – Create Unique Bios Instantly",
   description:
-    "Discover the best instagram bio ideas and generate stunning, high-converting bios in seconds. Free AI-powered tool for aesthetic, stylish, and professional profiles.",
+    "Generate the perfect bio for Instagram, TikTok, YouTube, LinkedIn, and more in seconds. Stand out and attract followers with our free AI-powered bio maker.",
   alternates: {
     canonical: "/",
   },
