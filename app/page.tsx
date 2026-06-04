@@ -81,7 +81,7 @@ export default function HomePage() {
         }}
       />
 
-      {/* Decorative Background Elements */}
+      {/* Decorative Background Elements - Updated */}
       <div className="fixed inset-0 -z-10 bg-[url('/noise.png')] opacity-[0.02] mix-blend-overlay"></div>
 
       <main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 bg-transparent text-foreground space-y-16 lg:space-y-24 overflow-hidden">
